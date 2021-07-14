@@ -471,8 +471,246 @@
 //=================================================================================================================================================
 
 
+// Тест 1 (style: #svetofor)
+
+// let svetofor = document.getElementById('svetofor');
+// let red = svetofor.children[0];
+// let yellow = svetofor.children[1];
+// let green = svetofor.children[2];
+// setInterval(function () {
+// 	if (red.classList.contains('red')) {
+// 		red.classList.remove('red');
+// 		yellow.classList.add('yellow');
+// 		return;
+// 	} else if (yellow.classList.contains('yellow')) {
+// 		yellow.classList.remove('yellow');
+// 		green.classList.add('green');
+// 		return;
+// 	} else if (green.classList.contains('green')) {
+// 		green.classList.remove('green');
+// 		red.classList.add('red');
+// 		return;
+// 	} else {
+// 		red.classList.add('red');
+// 	}
+// }, 1500);
+//===========================================
 
 
+// Тест 2
+
+// let str = `Все аргументы имеют такое же значение. 
+// 			Но отличие этого метода от setTimeout в том, 
+// 			что функция запускается не один раз, 
+// 			а периодически через указанный интервал времени.`
+// let arr = str.split('');
+// let i = 0;
+// let stopId = setInterval(function () {
+// 	if (i == arr.length) {
+// 		clearInterval(stopId);
+// 		return;
+// 	}
+// 	document.write('<span>' + arr[i] + '</span>');
+// 	i++;
+// }, 50)
+
+// let str = `Все аргументы имеют такое же значение. 
+// 			Но отличие этого метода от setTimeout в том, 
+// 			что функция запускается не один раз, 
+// 			а периодически через указанный интервал времени.`
+// let arr = str.split('');
+// let i = 0;
+// let stopId = setTimeout(function time() {
+// 	if (i == arr.length) {
+// 		clearTimeout(stopId);
+// 		return;
+// 	}
+// 	document.write('<span>' + arr[i] + '</span>');
+// 	i++;
+// 	stopId = setTimeout(time, 50);
+// }, 50)
+//===========================================
 
 
+// Тест 3 (style: .circle)
 
+// let body = document.body;
+// let i = 0;
+// let j = 1;
+// let color = '';
+// let stopId = setInterval(function () {
+// 	if (i == 20) {
+// 		clearInterval(stopId);
+// 		return;
+// 	}
+// 	if (j == 1) {
+// 		color = 'red';
+// 	}
+// 	if (j == 2) {
+// 		color = 'yellow';
+// 	}
+// 	if (j == 3) {
+// 		color = 'green';
+// 		j = 0;
+// 	}
+// 	body.insertAdjacentHTML('beforeEnd', '<div class="circle ' + color + '"></div>');
+// 	i++;
+// 	j++;
+// }, 300)
+//===========================================
+
+
+// Тест 4
+
+// let userNum = +prompt('Сделайте ставку:');
+// let randomNum = Math.floor(Math.random() * 11) - 5;
+// console.log(randomNum)
+// setTimeout(function () {
+// 	if (randomNum > 0) {
+// 		console.log(randomNum)
+// 		alert('Выполучаете: ' + userNum * randomNum + '$');
+// 	} else {
+// 		alert('В другой раз');
+// 	}
+// }, 800);
+//===========================================
+
+
+//=================================================================================================================================================
+// Функции
+//=================================================================================================================================================
+
+
+// Тест 1
+
+// let a = +prompt('Введите число а:');
+// let b = +prompt('Введите число b:');
+// function moreNum1(a, b) {
+// 	if (a > b) {
+// 		return 1;
+// 	} else if (a < b) {
+// 		return -1;
+// 	} else if (a == b) {
+// 		return 0;
+// 	}
+// }
+// document.write('<p>' + moreNum1(a, b) + '</p>');
+// function moreNum2(a, b) {
+// 	return a > b ? 1 : a < b ? -1 : 0;
+// }
+// document.write('<p>' + moreNum2(a, b) + '</p>');
+// let moreNum3 = (a, b) => a > b ? 1 : a < b ? -1 : 0;
+// document.write('<p>' + moreNum3(a, b) + '</p>');
+//===========================================
+
+
+// Тест 2
+
+// function myParagraph(bgColor, strColor, str) {
+// 	document.write('<span style="background-color: ' + bgColor + '; color: ' + strColor + '">' + str + '</span>');
+// }
+// myParagraph("yellow", "blue", "Lorem ipsum sit amet");
+//===========================================
+
+
+// Тест 3
+
+// let a = +prompt('Введите длину прямоугольника:');
+// let b = +prompt('Введите шириу прямоугольника (для площади квадрата можно не вводить):');
+// b = b == 0 ? undefined : b;
+// function square(a, b = a) {
+// 	return a * b;
+// }
+// document.write('<p>' + square(a, b) + '</p>');
+//===========================================
+
+
+//=================================================================================================================================================
+// Свойство  arguments функции
+//=================================================================================================================================================
+
+
+// Тест 1
+
+// function showWords() {
+// 	let result = '';
+// 	for (let i = 0; i < arguments.length; i++) {
+// 		result = result + arguments[i] + ' ';
+// 	}
+// 	document.write('<p>' + result + '</p>');
+// }
+// showWords("I've", "been", "learning", "JavaScript", "for", "a", "month");
+//===========================================
+
+
+// Тест 2
+
+// function complexDigit() {
+// 	let result = '';
+// 	for (let i = 0; i < arguments.length; i++) {
+// 		result = result + arguments[i];
+// 	}
+// 	console.log(Number(result))
+// 	document.write('<p>' + Number(result) + '</p>');
+// }
+// complexDigit(1, 9, 4, 8, 3);
+
+
+//=================================================================================================================================================
+// Функции-замыкания
+//=================================================================================================================================================
+
+
+// Тест 1
+
+// function minifyImg(widthImg) {
+// 	let leftImg = (document.documentElement.clientWidth - widthImg) / 2;
+// 	let topImg = (document.documentElement.clientHeight - widthImg) / 2;
+// 	document.write('<img style="position: absolute; width: ' + widthImg + 'px; left: ' + leftImg + 'px; top: ' + topImg + 'px;" src="img/1.jpg" alt="">');
+// }
+// let widthImg = +prompt('Введите ширину изображения:');
+// let min = +prompt('Укажите на сколько уменьшить иображение:');
+// let counter = +prompt('Сколько раз вывести изображение:');
+// function laps(fn) {
+// 	let stop = setInterval(function () {
+// 		if (counter == 0) {
+// 			clearInterval(stop);
+// 			return;
+// 		};
+// 		fn();
+// 		widthImg = widthImg - min;
+// 		counter--;
+// 	}, 200)
+// }
+// laps(function () { minifyImg(widthImg) })
+//===========================================
+
+
+//=================================================================================================================================================
+// Создание html-элементов в JavaScript. Обработка событий
+//=================================================================================================================================================
+
+
+// Тест 1 (style: .slide)
+
+// let allImg = document.querySelectorAll('.slide__box img');
+// let overlayImg = document.querySelector('.overlay__img img')
+// let overlayBox = document.querySelector('.overlay__box')
+// let overlay = document.querySelector('.overlay')
+// overlayBox.addEventListener('click', function () {
+// 	overlayBox.classList.remove('overlay__box-active');
+// 	overlay.classList.remove('overlay-active');
+// });
+// console.log(allImg)
+// for (let i = 0; i < allImg.length; i++) {
+// 	allImg[i].addEventListener('click', function () {
+// 		let src = allImg[i].getAttribute('src');
+// 		overlayImg.setAttribute('src', src);
+// 		overlayBox.classList.add('overlay__box-active');
+// 		overlay.classList.add('overlay-active');
+// 	})
+// }
+//===========================================
+
+
+// Тест 2 (style: .slide)

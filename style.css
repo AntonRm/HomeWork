@@ -204,3 +204,20 @@ h6 {
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.7);
 } */
+
+/* .replace-box {
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+}
+.replace-box__img {
+	width: 200px;
+	border: 2px dotted darkblue;
+	margin: 0px 10px 0px 0px;
+}
+.replace-box__img:last-child {
+	margin: 0;
+}
+.replace-box__img img {
+	max-width: 100%;
+} */

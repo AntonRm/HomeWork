@@ -701,7 +701,6 @@
 // 	overlayBox.classList.remove('overlay__box-active');
 // 	overlay.classList.remove('overlay-active');
 // });
-// console.log(allImg)
 // for (let i = 0; i < allImg.length; i++) {
 // 	allImg[i].addEventListener('click', function () {
 // 		let src = allImg[i].getAttribute('src');
@@ -713,4 +712,62 @@
 //===========================================
 
 
-// Тест 2 (style: .slide)
+// Тест 2 (style: .replace)
+
+// let allImg = document.querySelectorAll('.replace-box__img img');
+// for (let i = 0; i < allImg.length; i++) {
+// 	allImg[i].addEventListener('click', function () {
+// 		let src = allImg[i].getAttribute('src');
+// 		let arr = src.split('');
+// 		let results = arr.filter(function (item) {
+// 			return !isNaN(item);
+// 		});
+// 		allImg[i].setAttribute('src', 'img/flowers/flower' + results + '.png');
+// 		console.log(allImg[i])
+// 	})
+// }
+//===========================================
+
+
+// Тест 3 (style: .replace)
+
+// let allImg = document.querySelectorAll('.replace-box__img img');
+// for (let i = 0; i < allImg.length; i++) {
+// 	allImg[i].addEventListener('click', function () {
+// 		if (allImg[i].parentElement.nextElementSibling === null) {
+// 			allImg[i].setAttribute('src', 'img/cars/car1.jpg');
+// 		} else {
+// 			let src = allImg[i].parentElement.nextElementSibling.firstElementChild.getAttribute('src');
+// 			allImg[i].setAttribute('src', src);
+// 		}
+// 	})
+// }
+//===========================================
+
+
+// Тест 4 (style: .replace)
+
+// let allImg = document.querySelectorAll('.replace-box__img img');
+// let arr = [];
+// for (let i = 0; i < allImg.length; i++) {
+// 	arr[i] = allImg[i].getAttribute('src');
+// }
+// for (let i = 0; i < allImg.length; i++) {
+// 	allImg[i].addEventListener('click', function () {
+// 		let src = allImg[i].getAttribute('src');
+// 		let currenIndex = arr.findIndex(function (item) {
+// 			if (item === src) return true;
+// 		})
+// 		if (currenIndex === 7) currenIndex = -1;
+// 		src = arr[currenIndex + 1];
+// 		allImg[i].setAttribute('src', src);
+// 	})
+// }
+
+
+//=================================================================================================================================================
+// Генерация случайных чисел
+//=================================================================================================================================================
+
+
+// Тест 1

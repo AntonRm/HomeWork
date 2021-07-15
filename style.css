@@ -59,9 +59,9 @@ a:visited {
 a:hover {
 	text-decoration: none;
 }
-ul li {
+/* ul li {
 	list-style: none;
-}
+} */
 img {
 	vertical-align: top;
 }
@@ -76,6 +76,40 @@ h6 {
 }
 /*--------------------*/
 
+.wrapper {
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+.show-task {
+	width: 50%;
+	height: 100%;
+}
+.show-list {
+	width: 50%;
+	height: 100%;
+}
+ol li {
+	font-size: 22px;
+	margin: 0px 0px 10px 0px;
+}
+ul li {
+	font-size: 20px;
+	margin: 0px 0px 5px 10px;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+ul li:hover {
+	font-size: 21px;
+	color: cornflowerblue;
+}
+ul p {
+	display: none;
+	font-size: 16px;
+	padding: 5px;
+	font-style: italic;
+}
+
 /* .style-1 {
 	background-color: cornflowerblue;
 	height: 30px;
@@ -83,7 +117,7 @@ h6 {
 	text-align: center;
 	margin: 0px auto 10px;
 } */
-
+/* ============================================================================================================================================ */
 /* .style-2 {
 	height: 50px;
 	width: 800px;
@@ -91,7 +125,7 @@ h6 {
 	text-align: center;
 	margin: 0px auto 20px;
 } */
-
+/* ============================================================================================================================================ */
 /* .style-table {
 	border: 3px solid #000000;
 	border-collapse: collapse;
@@ -107,8 +141,11 @@ h6 {
 	border: 1px solid #000000;
 	background-color: #000000;
 } */
-
-/* #svetofor {
+/* ============================================================================================================================================ */
+#block_1 {
+	display: none;
+}
+.svetofor {
 	margin: 20px auto;
 	padding: 30px;
 	width: 130px;
@@ -138,9 +175,9 @@ h6 {
 }
 .green {
 	background-color: limegreen;
-} */
-
-/* .circle {
+}
+/* ============================================================================================================================================ */
+.circle {
 	display: inline-block;
 	width: 60px;
 	height: 60px;
@@ -159,15 +196,18 @@ h6 {
 }
 .green {
 	background-color: limegreen;
-} */
-
-/* .slide__box {
+}
+/* ============================================================================================================================================ */
+#block_2 {
+	display: none;
+}
+.slide__box {
 	height: 200px;
 	display: flex;
 	justify-content: center;
 }
 .slide__img {
-	width: 200px;
+	width: 10%;
 	height: 200px;
 	border: 2px dotted #000000;
 }
@@ -203,9 +243,12 @@ h6 {
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.7);
-} */
-
-/* .replace-box {
+}
+/* ============================================================================================================================================ */
+#block_3 {
+	display: none;
+}
+.replace-box {
 	display: flex;
 	justify-content: center;
 	padding: 20px;
@@ -220,4 +263,43 @@ h6 {
 }
 .replace-box__img img {
 	max-width: 100%;
-} */
+}
+/* ============================================================================================================================================ */
+.numBox {
+	display: inline-block;
+	width: 80px;
+	height: 105px;
+	padding: 20px;
+	border: 3px dashed #666;
+	border-radius: 10px;
+	font-size: 3.2rem;
+	text-align: center;
+	margin: 20px;
+	position: relative;
+	cursor: pointer;
+}
+
+.numBox:after {
+	content: "";
+	position: absolute;
+	width: 130%;
+	height: 120%;
+	border: 3px solid #666;
+	border-radius: 15px;
+	top: -10%;
+	left: -15%;
+}
+
+.numBox.red {
+	color: #f00;
+	border-color: #f00;
+	background-image: repeating-linear-gradient(45deg, transparent 10px, #ffd8d8 30px);
+}
+/* ============================================================================================================================================ */
+.table-guess td {
+	width: 70px;
+	height: 70px;
+	border: 2px solid cadetblue;
+	text-align: center;
+	font-size: 24px;
+}

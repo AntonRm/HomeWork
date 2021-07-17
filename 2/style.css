@@ -1,0 +1,155 @@
+/*Обнуление*/
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+nav,
+footer,
+header,
+aside,
+main {
+	display: block;
+}
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+/*--------------------*/
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+}
+h1 {
+	font-weight: 700;
+	font-size: 28px;
+	margin: 0 0 20px 0;
+}
+.modal {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.modal.open .modal-overlay,
+.modal.open .modal-window {
+	opacity: 1;
+	z-index: 1000;
+}
+.modal.hide .modal-overlay,
+.modal.hide .modal-window {
+	opacity: 1;
+	z-index: 1000;
+}
+.modal.open .modal-window {
+	transform: translateY(100px);
+}
+.modal.open .modal-overlay {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.modal.hide .modal-window {
+	transform: translateY(-200px);
+}
+.modal.hide .modal-overlay {
+	background-color: rgba(0, 0, 0, 0);
+}
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0);
+	transition: background 0.2s ease-in;
+}
+.modal-window {
+	width: 600px;
+	border-radius: 5px;
+	background-color: #ffffff;
+	margin: 0 auto;
+	transform: translateY(-200px);
+	transition: transform 0.4s ease-in;
+}
+.modal-overlay,
+.modal-window {
+	opacity: 0;
+	z-index: -1;
+}
+.modal-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px 10px;
+	border-bottom: 1px dotted #000000;
+}
+.modal-title {
+	font-size: 1.5rem;
+}
+.modal-close {
+	cursor: pointer;
+	font-size: 34px;
+}
+.modal-body {
+	padding: 10px;
+}
+.modal-footer {
+	padding: 5px 10px;
+	border-top: 1px dotted #000000;
+}

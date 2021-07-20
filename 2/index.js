@@ -1,11 +1,10 @@
 const modal = $.modal({
-	title: 'Modal Window',
+	title: 'Modal modal',
 	closable: true,
 	content: `
-		<h4>Modal is working</h4>
+		<h2>Modal is working</h2>
 		<p>qwrty qwrty qwerty qerty</p>
 		`,
 	width: '400px',
 });
 modal.open()
-

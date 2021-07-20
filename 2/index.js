@@ -6,5 +6,17 @@ const modal = $.modal({
 		<p>qwrty qwrty qwerty qerty</p>
 		`,
 	width: '400px',
+	footerButtons: [
+		{
+			text: 'Ok', type: 'primary', handler() {
+				console.log('Primary btn clicked');
+			}
+		},
+		{
+			text: 'Cancel', type: 'danger', handler() {
+				console.log('Danger btn clicked');
+			}
+		}
+	]
 });
 modal.open()
